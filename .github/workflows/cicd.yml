@@ -1,15 +1,15 @@
 name: cicd-workflow
 on: workflow_dispatch
 jobs:
-  cicd-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: ci-call
-        uses: arif511basha/mci/.github/workflows/ci.yml@main
+  
+  ci-call:
+    uses: arif511basha/mci/.github/workflows/ci.yml@main
 
-      - name: cd-call
-        uses: arif511basha/mcd/.github/workflows/cd.yml@main
+  cd-call:
+    needs: ci-call
+    uses: arif511basha/mcd/.github/workflows/cd.yml@main
 
-      - name: success message
-        run: echo "our cd/cd pipeline runs successfully"
-      
+  steps:
+    run: echo "main job succeful"
+         
+       
