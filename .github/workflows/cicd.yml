@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ci-call
-        uses: arif511basha/mci/ci.yml@main
+        uses: arif511basha/mci/.github/workflows/ci.yml@main
 
       - name: cd-call
-        uses: arif511basha/mcd/cd.yml@main
+        uses: arif511basha/mcd/.github/workflows/cd.yml@main
 
       - name: success message
         run: echo "our cd/cd pipeline runs successfully"
