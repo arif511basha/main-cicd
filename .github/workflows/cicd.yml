@@ -1,7 +1,6 @@
 name: cicd-workflow
 on: workflow_dispatch
 jobs:
-  
   ci-call:
     uses: arif511basha/mci/.github/workflows/ci.yml@main
 
@@ -9,7 +8,5 @@ jobs:
     needs: ci-call
     uses: arif511basha/mcd/.github/workflows/cd.yml@main
 
-  steps:
-    run: echo "main job succeful"
-         
+
        
